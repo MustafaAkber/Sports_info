@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SportsInfo — Corporate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top px-2 py-3 px-md-5 py-md-3 text-white">
+        <div class="container-fluid text-capitalize">
+            <div class="d-flex align-items-center gap-3">
+                <div style="width:48px;height:48px; border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700"
+                    class="bg-danger">
+                    SI</div>
+                <div>
+                    <div class="brand fs-5">SportsInfo</div>
+                    <small class="text-secondary">Infocom — Ver. 1.0</small>
+                </div>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white fs-2"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"
+                                onclick="clickChangeLink(this)">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-sec" onclick="clickChangeLink(this)">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" onclick="clickChangeLink(this)">
+                                Sports
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('cricket')">cricket</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('football')">football</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('tennis')">tennis</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('athletics')">athletics</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-sec" onclick="clickChangeLink(this)">contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="guestbook.html" onclick="clickChangeLink(this)">Guestbook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="hero-section text-capitalize">
+            <div class="container text-white">
+                <h1 class="hero-title">Sports information <br> with <span class="text-danger">corporate clarity</span>
+                </h1>
+                <p class="hero-subtitle">Comprehensive, accurate and professionally presented details <br> about sports
+                    —
+                    rules, players, history and records. Built for clarity and reliability.</p>
+                <a href="#about-sec" class="btn btn-danger text-decoration-none py-3 px-3" style="font-size: 1rem;">get
+                    more info <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+
+        <section class="players-section text-capitalize my-5">
+            <div class="container">
+                <h2 class="section-title text-center py-5"><span class="text-danger">—— popular</span> players</h2>
+
+                <div class="row" style="max-width: 1400px !important;">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="player-card">
+                            <img src="images/virat.jpg" class="player-img">
+                            <div class="card-body px-2 py-3">
+                                <h4>virat kohli</h4>
+                                <p>cricketer</p>
+                                <div class=" d-flex dt-social-links gap-3">
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-solid fa-globe"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="player-card">
+                            <img src="images/ronaldo.avif" class="player-img">
+                            <div class="card-body px-2 py-3">
+                                <h4>ronaldo</h4>
+                                <p>footballer</p>
+                                <div class=" d-flex dt-social-links gap-3">
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-solid fa-globe"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="player-card">
+                            <img src="images/valentino rossi.jpg" class="player-img">
+                            <div class="card-body px-2 py-3">
+                                <h4>Valentino Rossi</h4>
+                                <p>motorcycle racer</p>
+                                <div class=" d-flex dt-social-links gap-3">
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-solid fa-globe"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="rounded-circle border py-2 px-2 text-secondary"><i
+                                            class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ticket">
+            <div class="t-container text-capitalize">
+                <h1>upcoming big match</h1>
+                <a href="https://www.eticketing.pk" class="g-ticket button-red-black text-decoration-none">get
+                    ticket</a>
+            </div>
+        </section>
+
+        <section class="about-sec px-2 px-lg-3 my-5" id="about-sec">
+            <div class="ab-container px-2 px-lg-5 p-0 pe-md-2">
+                <div class="card border-0 px-2 px-lg-5 bg-transparent">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-6 ps-md-4 py-5">
+                            <div class="card-body text-center text-md-start">
+                                <h5 class="card-title fs-1 fw-bold">About the Sports Info</h5>
+                                <p class="card-text text-secondary my-4">Far far away, behind the word mountains, far
+                                    from
+                                    the countries Vokalia and Consonantia Even the all-powerful Pointing has no control
+                                    about the blind texts it is an almost unorthographic life One day however a small
+                                    line
+                                    of blind text by the name of Lorem Ipsum decided to leave for the far World of
+                                    Grammar.
+                                </p>
+                                <div class="about-team">
+                                    <div class="row row-gap-4">
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">100</h3>
+                                                <p class="m-0">Game Played</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">10</h3>
+                                                <p class="m-0">Coaches</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">20</h3>
+                                                <p class="m-0">Trophies</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">80</h3>
+                                                <p class="m-0">Members</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 px-0">
+                            <img src="images/img2.jpg" class="img-fluid h-100 object-fit-cover" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-section text-capitalize my-5" id="contact-sec">
+            <div class="container-fluid px-0">
+                <div class="row justify-content-center px-0 mx-auto" style="width: 80%; height: 600px;">
+                    <div class="col-md-6 d-none d-md-block h-100 px-4">
+                        <img src="images/v2.jpg" alt="" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="col-md-6 h-100 align-content-center px-4">
+                        <div class="contact-form">
+                            <form onsubmit="formSubmit(event)">
+                                <h2 class="section-title fw-semi-bold mb-3 text-danger"
+                                    style="text-align: left; font-size: 16px;">
+                                    ——
+                                    contact for any query</h2>
+                                <h3 class="mb-5 sec-title fw-bold">contact Form</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text"
+                                            class="form-control contact-input bg-transparent border-0 border-bottom rounded-0"
+                                            placeholder="Name" style="font-size: 10px;">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email"
+                                            class="form-control contact-input bg-transparent border-0 border-bottom rounded-0"
+                                            placeholder="Email" style="font-size: 10px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea
+                                            class="form-control contact-input bg-transparent border-0 border-bottom rounded-0"
+                                            rows="5" placeholder="Message" style="font-size: 10px;"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-danger mt-3 rounded-2 py-3 px-4" style="font-size: 14px;"
+                                            type="submit">Send Message <i
+                                                class="fa-solid fa-arrow-right ms-4"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="subscribe-sec px-0 py-5 px-lg-5 mx-auto mt-5 text-capitalize">
+        <div class="sub-container px-0 px-lg-5 py-5">
+            <div class="sub-head text-center">
+                <h2 class="sub-title fw-bold text-white fs-1">Subcribe our newsletter</h2>
+                <form onsubmit="subscribe(event)"
+                    class="px-lg-5 mt-4 d-none d-md-flex flex-wrap justify-content-center">
+                    <input type="email" class="form-control mb-3 rounded-0 rounded-start px-2 shadow-none "
+                        id="floatingInput" placeholder="Email Address"
+                        style="padding: 20px 12px; max-width: 700px !important; min-width: 20px !important;">
+                    <button class="subs text-uppercase btn btn-danger rounded-0 rounded-end border-0"
+                        style="height: fit-content !important; padding: 20px 12px;">subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container d-flex justify-content-between align-items-center">
+            <small class="text-muted">&copy; 2025 Infocom — SportsInfo</small>
+            <div>
+                <a class="text-muted me-3" href="#">Privacy</a>
+                <a class="text-muted" href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

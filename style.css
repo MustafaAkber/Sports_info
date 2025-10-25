@@ -1,0 +1,226 @@
+:root {
+    --muted: #6c757d;
+    --card-bg: #ffffff;
+    --surface: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--surface);
+    color: #212529
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.2px
+}
+
+.nav-link {
+    color: whitesmoke !important;
+    padding: 10px 15px !important;
+}
+
+.nav-link.active{
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    border-bottom: 2px solid darkred;
+}
+.nav-link:hover{
+    color: rgb(220, 53, 69) !important;
+    transition: 0.3s;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/stadium2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 225px 10%;
+    color: black;
+    position: relative;
+    z-index: -2;
+}
+
+.hero-title {
+    font-size: 4.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+.ticket {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+    background: url(/images/football\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    /* justify-items: center; */
+    text-align: center;
+    overflow: hidden;
+    /* align-content: center; */
+}
+
+.ticket::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.ticket .t-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 125px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.t-container h1 {
+    font-size: 45px;
+}
+
+.button-red-black {
+    width: fit-content;
+    background-color: rgb(190, 2, 2);
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.button-red-black::before {
+    content: "";
+    width: 0;
+    margin: auto;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: width 0.7s ease;
+}
+
+.button-red-black:hover::before {
+    width: 100%;
+}
+
+.contact-section {
+    padding: 40px;
+}
+
+.contact-section .form-control {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.guestbook-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.guestbook-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.btn-submit {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.guest-entry {
+    background-color: #f1f4ff;
+    border-left: 5px solid darkred;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.guest-name {
+    font-weight: 600;
+}
+
+.guest-message {
+    margin: 5px 0;
+}
+
+.player-card {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.player-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.subscribe-sec {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(images/stadium2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1300px;
+}
+
+footer {
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    padding: 18px 0
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-section {
+        padding: 225px 5% 225px 0px;
+    }
+}
