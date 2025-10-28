@@ -1,5 +1,16 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyAl_1vBoZTilPOGmxVGupoz5ulNmsaf9W0",
+    authDomain: "sports-info-7e6f2.firebaseapp.com",
+    projectId: "sports-info-7e6f2",
+    storageBucket: "sports-info-7e6f2.firebasestorage.app",
+    messagingSenderId: "857685628233",
+    appId: "1:857685628233:web:86c15bde71bc7da2083698"
+};
+
+var app = firebase.initializeApp(firebaseConfig);
+
 var navLinks = document.getElementsByClassName("nav-link");
-// console.log(navLinks);
+
 function clickChangeLink(element) {
     try {
         for (let i = 0; i < navLinks.length; i++) {
@@ -25,6 +36,12 @@ function formSubmit(event) {
                 text: "all fields are not filled",
             });
         } else {
+            var contactInfo = {
+                userName: contactInputs[0].value,
+                userEmail: contactInputs[1].value,
+                userMessage: contactInputs[2].value,
+            }
+            firebase.database().ref("contacts").push(contactInfo);
             Swal.fire({
                 title: "Good job!",
                 text: "your message have been sent successfully",
@@ -50,6 +67,7 @@ function subscribe(event) {
                 text: "Please enter your email",
             });
         } else {
+            firebase.database().ref("subscribers").push(input.value);
             Swal.fire({
                 title: "Good job!",
                 text: "you subscribed our website successfully",
@@ -154,4 +172,9 @@ function sportsData(game) {
 
         localStorage.setItem("spData", JSON.stringify(sportsInfo));
     }
+}
+
+function newsPage(card) {
+    localStorage.setItem("newsData", JSON.stringify(card.innerHTML));
+    window.location.href = 'news.html';
 }

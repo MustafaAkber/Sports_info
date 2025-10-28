@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
                 aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-3">
@@ -101,26 +103,28 @@
                     <div class="col-lg-8">
                         <div class="row g-4 h-100">
                             <div class="col-md-6">
-                                <div class="news-card h-100">
+                                <div class="news-card h-100" onclick="newsPage(this)">
                                     <img src="images/news1.webp"
                                         alt="Football">
                                     <div class="news-content">
                                         <span class="category bg-warning text-dark">Football</span>
                                         <span class="news-date">March 27, 2025</span>
-                                        <h5>Pakistan Army Triumphs in National Inter-Departments Judo Championship</h5>
+                                        <h5 class="half-para">Pakistan Army Triumphs in National Inter-Departments Judo Championship</h5>
+                                        <h5 class="full-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto assumenda eum repudiandae dolores laborum aliquam ipsa quaerat labore. Ipsam nulla consectetur voluptate magni iure commodi at aliquid nobis quas quaerat. Quos nostrum ipsa molestias?</h5>
                                         <a href="#" class="read-more">Read More</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <div class="news-card h-100">
+                                <div class="news-card h-100" onclick="newsPage(this)">
                                     <img src="images/news2.jpg"
                                         alt="Tennis">
                                     <div class="news-content">
                                         <span class="category bg-warning text-dark">Tennis</span>
                                         <span class="news-date">March 27, 2025</span>
-                                        <h5>Rohan Noori Dominates GCC Open Tennis Championships</h5>
+                                        <h5 class="half-para">Rohan Noori Dominates GCC Open Tennis Championships</h5>
+                                        <h5 class="full-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur mollitia, odio omnis facilis delectus dolorum quia ratione, earum ullam quidem beatae, ex iusto recusandae quis!</h5>
                                         <a href="#" class="read-more">Read More</a>
                                     </div>
                                 </div>
@@ -129,32 +133,35 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="small-news">
+                        <div class="small-news" onclick="newsPage(this)">
                             <img src="images/news3.png" alt="Golf">
                             <div class="small-news-content">
                                 <span class="category bg-warning">Golf</span>
                                 <span class="news-date">March 27, 2025</span>
-                                <h6 class="mt-2">Alula Camel Racecourse to Host Heritage Sports</h6>
+                                <h6 class="mt-2 half-para">Alula Camel Racecourse to Host Heritage Sports</h6>
+                                <h6 class="mt-2 full-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni libero placeat nisi incidunt recusandae beatae dolorum numquam modi amet minus adipisci vero reprehenderit minima, suscipit perspiciatis eos quibusdam laudantium, iusto sunt sit dolores, fuga id. Id, culpa ducimus obcaecati hic sint repellat impedit amet nihil.</h6>
                                 <a href="#" class="text-warning">Read More</a>
                             </div>
                         </div>
 
-                        <div class="small-news">
+                        <div class="small-news" onclick="newsPage(this)">
                             <img src="images/news4.jpg" alt="Chess">
                             <div class="small-news-content">
                                 <span class="category bg-warning">Chess</span>
                                 <span class="news-date">March 27, 2025</span>
-                                <h6 class="mt-2">Gukesh Dommaraju Becomes Youngest World Chess Champion</h6>
+                                <h6 class="mt-2 half-para">Gukesh Dommaraju Becomes Youngest World Chess Champion</h6>
+                                <h6 class="mt-2 full-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos expedita est ratione excepturi id at doloremque rem incidunt quidem fugiat officiis ut ex, error explicabo, laborum asperiores laudantium distinctio, quaerat consequuntur ad.</h6>
                                 <a href="#" class="text-warning">Read More</a>
                             </div>
                         </div>
 
-                        <div class="small-news">
+                        <div class="small-news" onclick="newsPage(this)">
                             <img src="images/news5.webp" alt="Judo">
                             <div class="small-news-content">
                                 <span class="category bg-warning">Judo</span>
                                 <span class="news-date">March 27, 2025</span>
-                                <h6 class="mt-2">Punjab Police Prepares for Upcoming Championships</h6>
+                                <h6 class="mt-2 half-para">Punjab Police Prepares for Upcoming Championships</h6>
+                                <h6 class="mt-2 full-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet, eos provident minima magni pariatur non in porro vero, blanditiis rem tenetur qui?</h6>
                                 <a href="#" class="text-warning">Read More</a>
                             </div>
                         </div>
@@ -164,6 +171,68 @@
         </section>
 
 
+        
+        <section class="ticket">
+            <div class="t-container text-capitalize">
+                <h1>upcoming big match</h1>
+                <a href="https://www.eticketing.pk" class="g-ticket button-red-black text-decoration-none">get
+                    ticket</a>
+                </div>
+            </section>
+            
+            <section class="about-sec px-0 px-lg-3 my-5" id="about-sec">
+                <div class="ab-container px-0 px-lg-5 p-0 pe-md-2">
+                    <div class="card border-0 px-0 px-lg-5 bg-transparent">
+                        <div class="row g-0 justify-content-between">
+                            <div class="col-md-6 ps-md-4 py-5">
+                                <div class="card-body text-center text-md-start">
+                                    <h5 class="card-title fs-1 fw-bold">About the Sports Info</h5>
+                                    <p class="card-text text-secondary my-4">Far far away, behind the word mountains, far
+                                        from
+                                        the countries Vokalia and Consonantia Even the all-powerful Pointing has no control
+                                        about the blind texts it is an almost unorthographic life One day however a small
+                                        line
+                                        of blind text by the name of Lorem Ipsum decided to leave for the far World of
+                                        Grammar.
+                                    </p>
+                                    <div class="about-team">
+                                        <div class="row row-gap-4 text-capitalize">
+                                            <div class="col-6">
+                                                <div class="card border-0 text-center libg rounded-0 py-4">
+                                                    <h3 class="card-title fw-bold">4+</h3>
+                                                    <p class="m-0">sports</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="card border-0 text-center libg rounded-0 py-4">
+                                                    <h3 class="card-title fw-bold">10</h3>
+                                                <p class="m-0">Coaches</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">3+</h3>
+                                                <p class="m-0">awards</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0 text-center libg rounded-0 py-4">
+                                                <h3 class="card-title fw-bold">7</h3>
+                                                <p class="m-0">Members</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 px-2 text-center">
+                            <img src="images/img2.jpg" class="img-fluid h-100 w-100 object-fit-cover about-img" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="players-section text-capitalize my-5">
             <div class="container">
                 <h2 class="section-title text-center py-5"><span class="text-warning">—— popular</span> players</h2>
@@ -230,75 +299,13 @@
             </div>
         </section>
 
-        <section class="ticket">
-            <div class="t-container text-capitalize">
-                <h1>upcoming big match</h1>
-                <a href="https://www.eticketing.pk" class="g-ticket button-red-black text-decoration-none">get
-                    ticket</a>
-            </div>
-        </section>
-
-        <section class="about-sec px-0 px-lg-3 my-5" id="about-sec">
-            <div class="ab-container px-0 px-lg-5 p-0 pe-md-2">
-                <div class="card border-0 px-0 px-lg-5 bg-transparent">
-                    <div class="row g-0 justify-content-between">
-                        <div class="col-md-6 ps-md-4 py-5">
-                            <div class="card-body text-center text-md-start">
-                                <h5 class="card-title fs-1 fw-bold">About the Sports Info</h5>
-                                <p class="card-text text-secondary my-4">Far far away, behind the word mountains, far
-                                    from
-                                    the countries Vokalia and Consonantia Even the all-powerful Pointing has no control
-                                    about the blind texts it is an almost unorthographic life One day however a small
-                                    line
-                                    of blind text by the name of Lorem Ipsum decided to leave for the far World of
-                                    Grammar.
-                                </p>
-                                <div class="about-team">
-                                    <div class="row row-gap-4 text-capitalize">
-                                        <div class="col-6">
-                                            <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">4+</h3>
-                                                <p class="m-0">sports</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">10</h3>
-                                                <p class="m-0">Coaches</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">3+</h3>
-                                                <p class="m-0">awards</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">7</h3>
-                                                <p class="m-0">Members</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 px-0">
-                            <img src="images/img2.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="contact-section text-capitalize my-5" id="contact-sec">
+        <section class="contact-section text-capitalize my-5 bg-light" id="contact-sec">
             <div class="container-fluid px-0">
                 <div class="row justify-content-center px-0 mx-auto" style="width: 80%; height: 600px;">
                     <div class="col-md-6 d-none d-md-block h-100 px-4">
                         <img src="images/v2.jpg" alt="" class="w-100 h-100 object-fit-cover">
                     </div>
-                    <div class="col-md-6 h-100 align-content-center px-4">
+                    <div class="col-md-6 h-100 align-content-center px-md-4">
                         <div class="contact-form">
                             <form onsubmit="formSubmit(event)">
                                 <h2 class="section-title fw-semi-bold mb-3 text-warning"
@@ -337,15 +344,15 @@
     </main>
 
     <section class="subscribe-sec px-0 py-5 px-lg-5 mx-auto mt-5 text-capitalize">
-        <div class="sub-container px-0 px-lg-5 py-5">
+        <div class="sub-container px-2 px-lg-5 py-5">
             <div class="sub-head text-center">
                 <h2 class="sub-title fw-bold text-white fs-1">Subcribe our newsletter</h2>
                 <form onsubmit="subscribe(event)"
-                    class="px-lg-5 mt-4 d-none d-md-flex flex-wrap justify-content-center">
-                    <input type="email" class="form-control mb-3 rounded-0 rounded-start px-2 shadow-none "
+                    class="px-lg-5 mt-4 d-md-flex flex-wrap justify-content-center">
+                    <input type="email" class="form-control mb-3 rounded-0 px-2 shadow-none "
                         id="floatingInput" placeholder="Email Address"
                         style="padding: 20px 12px; max-width: 700px !important; min-width: 20px !important;">
-                    <button class="subs text-uppercase btn btn-warning rounded-0 rounded-end border-0"
+                    <button class="subs text-uppercase btn btn-warning rounded-0 border-0"
                         style="height: fit-content !important; padding: 20px 12px;">subscribe</button>
                 </form>
             </div>

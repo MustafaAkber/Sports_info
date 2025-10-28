@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="sports.css">
+    <link rel="stylesheet" href="news.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -72,52 +72,10 @@
         </div>
     </nav>
 
-    <!-- Content -->
-    <div class="container-content mt-4 mb-5">
-        <div class="image mb-4 sport-info">
+    <div class="news-card" id="newsCard">
 
-        </div>
-
-        <h1 class="sport-info"></h1>
-
-        <h3>a. How many players play the game?</h3>
-        <p class="sport-info"></p>
-
-        <h3>b. Strategy of the game</h3>
-        <p class="sport-info"></p>
-
-        <h3>c. Is it a team game?</h3>
-        <p class="sport-info"></p>
-
-        <h3>d. Rules of the game</h3>
-        <ul>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-        </ul>
-
-        <h3>e. Important facts</h3>
-        <div class="fact-box">
-            <ul>
-                <li class="sport-info"></li>
-                <li class="sport-info"></li>
-                <li class="sport-info"></li>
-            </ul>
-        </div>
-
-        <h3>f. Statistics / Records</h3>
-        <ul>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-            <li class="sport-info"></li>
-        </ul>
-
-        <h3>h. Countries that play cricket</h3>
-        <p class="sport-info"></p>
     </div>
+
 
     <footer>
         <div class="container d-flex justify-content-between align-items-center">
@@ -134,17 +92,11 @@
     <script src="app.js"></script>
 
     <script>
-        try {
-            var data = JSON.parse(localStorage.getItem("spData"));
-            var sportsInfo = document.getElementsByClassName("sport-info");
-            for (let i = 0; i < sportsInfo.length; i++) {
-                sportsInfo[i].innerHTML = data[i];
-            }
-            localStorage.removeItem("spData");
-        } catch (error) {
-            console.log(error);
-            
-        }
+        var newsdata = JSON.parse(localStorage.getItem("newsData"));
+        console.log(newsdata);
+        var newsCard = document.getElementById("newsCard");
+        newsCard.innerHTML = newsdata;
+        localStorage.removeItem("newsData");
 
     </script>
 

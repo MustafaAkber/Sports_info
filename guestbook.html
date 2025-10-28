@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,41 +11,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
 </head>
+
 <body>
-    
+
     <section class="guestbook-sec">
         <div class="guestbook-container">
-            <h2 class="guestbook-title text-danger">🖊 Guestbook</h2>
+            <h2 class="guestbook-title text-warning">🖊 Guestbook</h2>
 
-            <form>
+            <form onsubmit="guestbook(event)">
                 <div class="mb-3">
                     <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control bg-transparent border-0 border-bottom" id="name" placeholder="Enter your name" required>
+                    <input type="text" class="form-control bg-transparent border-0 border-bottom" id="name"
+                        placeholder="Enter your name" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control bg-transparent border-0 border-bottom" id="message" rows="4" placeholder="Write your message..."
-                        required></textarea>
+                    <textarea class="form-control bg-transparent border-0 border-bottom" id="message" rows="4"
+                        placeholder="Write your message..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-submit btn-danger">Submit</button>
+                <button type="submit" class="btn btn-submit btn-warning">Submit</button>
             </form>
 
             <hr class="my-4">
 
-            <h5 class="mb-3 text-secondary">Previous Entries</h5>
-            <div class="guest-entry">
-                <div class="guest-name text-danger">Ali Khan</div>
-                <div class="guest-message">Had a great time visiting this page! Keep up the good work.</div>
-                <small class="text-muted">Posted on October 21, 2025</small>
-            </div>
-            <div class="guest-entry">
-                <div class="guest-name text-danger">Sara Ahmed</div>
-                <div class="guest-message">Love the clean design and simplicity!</div>
-                <small class="text-muted">Posted on October 22, 2025</small>
-            </div>
         </div>
     </section>
 
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAl_1vBoZTilPOGmxVGupoz5ulNmsaf9W0",
+            authDomain: "sports-info-7e6f2.firebaseapp.com",
+            projectId: "sports-info-7e6f2",
+            storageBucket: "sports-info-7e6f2.firebasestorage.app",
+            messagingSenderId: "857685628233",
+            appId: "1:857685628233:web:86c15bde71bc7da2083698"
+        };
+
+        var app = firebase.initializeApp(firebaseConfig);
+
+        var inputs = document.getElementsByClassName("form-control");
+        function guestbook(event) {
+            event.preventDefault();
+            try {
+                if (
+                    inputs[0].value == "" ||
+                    inputs[1].value == ""
+                ) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "all fields are not filled",
+                    });
+                } else {
+                    var guestbookInfo = {
+                        userName: inputs[0].value,
+                        userMessage: inputs[1].value,
+                    }
+                    firebase.database().ref("guestsbook").push(guestbookInfo);
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "your message have been sent successfully",
+                        icon: "success",
+                    });
+                    for (let i = 0; i < inputs.length; i++) {
+                        inputs[i].value = "";
+                    }
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
