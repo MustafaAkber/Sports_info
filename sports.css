@@ -1,0 +1,112 @@
+body {
+    font-family: "Oswald", sans-serif;
+    background: f8f9fa;
+    color: #212529
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.2px
+}
+
+.nav-link {
+    color: whitesmoke !important;
+    padding: 10px 15px !important;
+}
+
+.nav-link.active {
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    border-bottom: 2px solid darkred;
+}
+
+.nav-link:hover {
+    color: rgb(220, 53, 69) !important;
+    transition: 0.3s;
+}
+
+.container-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 30px;
+}
+
+.container-content h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #dc3545;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.fact-box {
+    background-color: #fff5f5;
+    border-left: 5px solid #dc3545;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 55px 0px;
+    object-fit: cover;
+}
+
+footer {
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    padding: 18px 0
+}
+
+@media (max-width: 768px) {
+    .container-content {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p,
+    li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+    }
+}

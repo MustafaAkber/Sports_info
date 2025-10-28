@@ -1,7 +1,6 @@
 :root {
     --muted: #6c757d;
     --card-bg: #ffffff;
-    --surface: #f8f9fa;
 }
 
 * {
@@ -9,8 +8,8 @@
 }
 
 body {
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    background: var(--surface);
+    font-family: "Oswald", sans-serif;
+    background: f8f9fa;
     color: #212529
 }
 
@@ -37,15 +36,17 @@ body {
     padding: 10px 15px !important;
 }
 
-.nav-link.active{
+.nav-link.active {
     background-color: transparent;
     backdrop-filter: blur(1px);
-    border-bottom: 2px solid darkred;
+    border-bottom: 2px solid rgb(255, 193, 7);
 }
-.nav-link:hover{
-    color: rgb(220, 53, 69) !important;
+
+.nav-link:hover {
+    color: rgb(255, 193, 7) !important;
     transition: 0.3s;
 }
+
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/stadium2.jpg);
     background-size: cover;
@@ -53,7 +54,6 @@ body {
     padding: 225px 10%;
     color: black;
     position: relative;
-    z-index: -2;
 }
 
 .hero-title {
@@ -67,19 +67,132 @@ body {
     margin-bottom: 35px;
 }
 
+.news-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 700px;
+    margin: 10px auto 0;
+    font-size: 15px;
+}
+
+.news-card {
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.1);
+}
+
+.news-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.category {
+    padding: 3px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.news-date {
+    font-size: 12px;
+}
+
+.news-content h5 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.read-more {
+    display: inline-block;
+    color: white;
+    font-size: 13px;
+    margin-top: 5px;
+    text-decoration: none;
+    position: relative;
+}
+.read-more::before{
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: rgb(255, 193, 7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.read-more:hover::before{
+    width: 100%;
+    transition: 0.4s;
+}
+.small-news {
+    display: flex;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.small-news img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.small-news-content {
+    padding: 15px;
+    color: #000;
+}
+
+.small-news-content h6 {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.small-news-content a {
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 13px;
+}
+
 .ticket {
     width: 100%;
     height: 100vh;
     margin-top: 100px;
-    background: url(/images/football\ 1.jpg);
+    background: url(/images/football.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    /* justify-items: center; */
     text-align: center;
     overflow: hidden;
-    /* align-content: center; */
 }
 
 .ticket::before {
@@ -110,7 +223,7 @@ body {
 
 .button-red-black {
     width: fit-content;
-    background-color: rgb(190, 2, 2);
+    background-color: rgb(255, 193, 7);
     border: none;
     color: white;
     font-size: 22px;
@@ -175,7 +288,7 @@ body {
 
 .guest-entry {
     background-color: #f1f4ff;
-    border-left: 5px solid darkred;
+    border-left: 5px solid rgb(255, 193, 7);
     padding: 15px 20px;
     border-radius: 8px;
     margin-bottom: 15px;

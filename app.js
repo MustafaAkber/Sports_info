@@ -87,7 +87,7 @@ function sportsData(game) {
         localStorage.setItem("spData", JSON.stringify(sportsInfo));
     } else if (game == "football") {
         var sportsInfo = [
-            '<img src="images/football 1.jpg" alt="Football Image" class="" />',
+            '<img src="images/football.jpg" alt="Football Image" class="" />',
             "Football (Soccer) Information",
             "Each team has <strong>11 players</strong> on the field at a time, including one goalkeeper. So, a total of <strong>22 players</strong> play in a match.",
             "Football involves two teams competing to score goals by getting the ball into the opponent’s net. The main strategy includes maintaining possession, creating goal-scoring opportunities through teamwork, passing, and tactical positioning, while defending to prevent the opponent from scoring.",

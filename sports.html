@@ -8,114 +8,18 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-xh6hu9x9jhxzzI2VZXhEnkD++Kq1dH/F6hNnK3vLzWFlBShztxvHd5/jrOB1D2IhVhrJ+M6YtDQnDFkJrJw2Fw=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #212121;
-            background: linear-gradient(135deg, #f8f9fa, #f1f1f1);
-        }
-
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.5) !important;
-        }
-
-        .navbar .nav-link {
-            color: white !important;
-            font-weight: 500;
-            text-transform: capitalize;
-        }
-
-        .nav-link.active {
-            color: #dc3545 !important;
-        }
-
-        .navbar .nav-link:hover {
-            color: #dc3545 !important;
-        }
-
-        .container-content {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px 30px;
-        }
-
-        .container-content h1 {
-            text-align: center;
-            font-weight: 700;
-            color: #dc3545;
-            margin-bottom: 30px;
-        }
-
-        h3 {
-            color: #dc3545;
-            margin-top: 25px;
-            font-weight: 600;
-        }
-
-        p,
-        li {
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .fact-box {
-            background-color: #fff5f5;
-            border-left: 5px solid #dc3545;
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .image img {
-            width: 100%;
-            height: auto;
-            border-radius: 55px 0px;
-            object-fit: cover;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container-content {
-                padding: 25px 20px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-            }
-
-            p,
-            li {
-                font-size: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .brand {
-                font-size: 1rem;
-            }
-
-            .navbar-toggler {
-                padding: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="sports.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md px-3 py-3 text-white">
+    <nav class="navbar navbar-expand-md px-3 py-3 text-white w-100">
         <div class="container-fluid text-capitalize">
             <div class="d-flex align-items-center gap-3">
                 <div class="bg-danger fw-bold d-flex align-items-center justify-content-center rounded"
@@ -133,10 +37,10 @@
                 <i class="fa-solid fa-bars text-white fs-2"></i>
             </button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -144,11 +48,19 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html/#about-sec">About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Sports</a>
-                            <ul class="dropdown-menu bg-danger">
-                                <li><a class="dropdown-item text-white" href="#">Cricket</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Football</a></li>
+                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" onclick="clickChangeLink(this)">
+                                Sports
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('cricket')">cricket</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('football')">football</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('tennis')">tennis</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('athletics')">athletics</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="index.html/#contact-sec">Contact</a></li>
@@ -204,12 +116,21 @@
 
         <h3>h. Countries that play cricket</h3>
         <p class="sport-info"></p>
-
-        <hr />
-        <p class="text-center text-secondary mt-4">© 2025 SportsInfo | Designed with ❤️ using HTML, CSS & Bootstrap</p>
     </div>
 
+    <footer>
+        <div class="container d-flex justify-content-between align-items-center">
+            <small class="text-muted">&copy; 2025 Infocom — SportsInfo</small>
+            <div>
+                <a class="text-muted me-3" href="#">Privacy</a>
+                <a class="text-muted" href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="app.js"></script>
 
     <script>
         var data = JSON.parse(localStorage.getItem("spData"));
@@ -219,8 +140,9 @@
             sportsInfo[i].innerHTML = data[i];
         }
         localStorage.removeItem("spData");
-        
+
     </script>
+
 
 </body>
 

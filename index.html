@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md fixed-top px-2 py-3 px-md-5 py-md-3 text-white">
+    <nav class="navbar navbar-expand-lg fixed-top px-2 py-3 px-md-5 py-md-3 text-white">
         <div class="container-fluid text-capitalize">
             <div class="d-flex align-items-center gap-3">
                 <div style="width:48px;height:48px; border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700"
-                    class="bg-danger">
+                    class="bg-warning">
                     SI</div>
                 <div>
                     <div class="brand fs-5">SportsInfo</div>
@@ -30,10 +33,10 @@
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars text-white fs-2"></i>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -51,10 +54,14 @@
                                 Sports
                             </a>
                             <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('cricket')">cricket</a></li>
-                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('football')">football</a></li>
-                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('tennis')">tennis</a></li>
-                                <li><a class="dropdown-item text-white" href="sports.html" onclick="sportsData('athletics')">athletics</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('cricket')">cricket</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('football')">football</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('tennis')">tennis</a></li>
+                                <li><a class="dropdown-item text-white" href="sports.html"
+                                        onclick="sportsData('athletics')">athletics</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -71,20 +78,95 @@
     <main>
         <section class="hero-section text-capitalize">
             <div class="container text-white">
-                <h1 class="hero-title">Sports information <br> with <span class="text-danger">corporate clarity</span>
+                <h1 class="hero-title">Sports information <br> with <span class="text-warning">corporate clarity</span>
                 </h1>
                 <p class="hero-subtitle">Comprehensive, accurate and professionally presented details <br> about sports
                     —
                     rules, players, history and records. Built for clarity and reliability.</p>
-                <a href="#about-sec" class="btn btn-danger text-decoration-none py-3 px-3" style="font-size: 1rem;">get
+                <a href="#about-sec" class="button-red-black bg-warning text-decoration-none py-3 px-3"
+                    style="font-size: 1rem;">get
                     more info <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="news-section my-5">
+            <div class="container">
+                <div class="section-title">
+                    <h2>NEWS & MEDIA</h2>
+                    <p>In a stunning turn of events, the baseball world is buzzing with excitement as a whirlwind of
+                        developments unfolds both on and off the field.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="row g-4 h-100">
+                            <div class="col-md-6">
+                                <div class="news-card h-100">
+                                    <img src="images/news1.webp"
+                                        alt="Football">
+                                    <div class="news-content">
+                                        <span class="category bg-warning text-dark">Football</span>
+                                        <span class="news-date">March 27, 2025</span>
+                                        <h5>Pakistan Army Triumphs in National Inter-Departments Judo Championship</h5>
+                                        <a href="#" class="read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="news-card h-100">
+                                    <img src="images/news2.jpg"
+                                        alt="Tennis">
+                                    <div class="news-content">
+                                        <span class="category bg-warning text-dark">Tennis</span>
+                                        <span class="news-date">March 27, 2025</span>
+                                        <h5>Rohan Noori Dominates GCC Open Tennis Championships</h5>
+                                        <a href="#" class="read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="small-news">
+                            <img src="images/news3.png" alt="Golf">
+                            <div class="small-news-content">
+                                <span class="category bg-warning">Golf</span>
+                                <span class="news-date">March 27, 2025</span>
+                                <h6 class="mt-2">Alula Camel Racecourse to Host Heritage Sports</h6>
+                                <a href="#" class="text-warning">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="small-news">
+                            <img src="images/news4.jpg" alt="Chess">
+                            <div class="small-news-content">
+                                <span class="category bg-warning">Chess</span>
+                                <span class="news-date">March 27, 2025</span>
+                                <h6 class="mt-2">Gukesh Dommaraju Becomes Youngest World Chess Champion</h6>
+                                <a href="#" class="text-warning">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="small-news">
+                            <img src="images/news5.webp" alt="Judo">
+                            <div class="small-news-content">
+                                <span class="category bg-warning">Judo</span>
+                                <span class="news-date">March 27, 2025</span>
+                                <h6 class="mt-2">Punjab Police Prepares for Upcoming Championships</h6>
+                                <a href="#" class="text-warning">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
 
         <section class="players-section text-capitalize my-5">
             <div class="container">
-                <h2 class="section-title text-center py-5"><span class="text-danger">—— popular</span> players</h2>
+                <h2 class="section-title text-center py-5"><span class="text-warning">—— popular</span> players</h2>
 
                 <div class="row" style="max-width: 1400px !important;">
                     <div class="col-lg-4 col-md-6">
@@ -156,9 +238,9 @@
             </div>
         </section>
 
-        <section class="about-sec px-2 px-lg-3 my-5" id="about-sec">
-            <div class="ab-container px-2 px-lg-5 p-0 pe-md-2">
-                <div class="card border-0 px-2 px-lg-5 bg-transparent">
+        <section class="about-sec px-0 px-lg-3 my-5" id="about-sec">
+            <div class="ab-container px-0 px-lg-5 p-0 pe-md-2">
+                <div class="card border-0 px-0 px-lg-5 bg-transparent">
                     <div class="row g-0 justify-content-between">
                         <div class="col-md-6 ps-md-4 py-5">
                             <div class="card-body text-center text-md-start">
@@ -172,11 +254,11 @@
                                     Grammar.
                                 </p>
                                 <div class="about-team">
-                                    <div class="row row-gap-4">
+                                    <div class="row row-gap-4 text-capitalize">
                                         <div class="col-6">
                                             <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">100</h3>
-                                                <p class="m-0">Game Played</p>
+                                                <h3 class="card-title fw-bold">4+</h3>
+                                                <p class="m-0">sports</p>
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -187,13 +269,13 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">20</h3>
-                                                <p class="m-0">Trophies</p>
+                                                <h3 class="card-title fw-bold">3+</h3>
+                                                <p class="m-0">awards</p>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="card border-0 text-center libg rounded-0 py-4">
-                                                <h3 class="card-title fw-bold">80</h3>
+                                                <h3 class="card-title fw-bold">7</h3>
                                                 <p class="m-0">Members</p>
                                             </div>
                                         </div>
@@ -202,7 +284,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 px-0">
-                            <img src="images/img2.jpg" class="img-fluid h-100 object-fit-cover" alt="...">
+                            <img src="images/img2.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="...">
                         </div>
                     </div>
                 </div>
@@ -219,7 +301,7 @@
                     <div class="col-md-6 h-100 align-content-center px-4">
                         <div class="contact-form">
                             <form onsubmit="formSubmit(event)">
-                                <h2 class="section-title fw-semi-bold mb-3 text-danger"
+                                <h2 class="section-title fw-semi-bold mb-3 text-warning"
                                     style="text-align: left; font-size: 16px;">
                                     ——
                                     contact for any query</h2>
@@ -241,8 +323,8 @@
                                             rows="5" placeholder="Message" style="font-size: 10px;"></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-danger mt-3 rounded-2 py-3 px-4" style="font-size: 14px;"
-                                            type="submit">Send Message <i
+                                        <button class="btn btn-warning mt-3 rounded-2 py-3 px-4"
+                                            style="font-size: 14px;" type="submit">Send Message <i
                                                 class="fa-solid fa-arrow-right ms-4"></i></button>
                                     </div>
                                 </div>
@@ -263,7 +345,7 @@
                     <input type="email" class="form-control mb-3 rounded-0 rounded-start px-2 shadow-none "
                         id="floatingInput" placeholder="Email Address"
                         style="padding: 20px 12px; max-width: 700px !important; min-width: 20px !important;">
-                    <button class="subs text-uppercase btn btn-danger rounded-0 rounded-end border-0"
+                    <button class="subs text-uppercase btn btn-warning rounded-0 rounded-end border-0"
                         style="height: fit-content !important; padding: 20px 12px;">subscribe</button>
                 </form>
             </div>
